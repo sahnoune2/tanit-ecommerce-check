@@ -27,7 +27,7 @@ exports.emailValidation = async (req, res) => {
     if (userFound || companyFound) {
       res.status(400).send({ msg: "user already exists" });
     } else {
-      const code = randomCode();
+      const code = 1111;
 
       const mailOptions = {
         to: email,
@@ -48,7 +48,9 @@ exports.emailValidation = async (req, res) => {
         if (error) throw error;
       });
 
-      res.status(200).send({ msg: "verification mail sent successfully " });
+      res
+        .status(200)
+        .send({ msg: "verification mail sent successfully ", code: code });
     }
   } catch (error) {
     res
