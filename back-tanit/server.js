@@ -12,9 +12,7 @@ config();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: (origin, callback) => {
-      callback(null, true); // allow all origins dynamically
-    },
+    origin: "https://tanit-ecommerce-check-1.onrender.com",
     credentials: true,
   })
 );
