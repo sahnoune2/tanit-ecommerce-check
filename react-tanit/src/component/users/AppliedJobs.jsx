@@ -12,7 +12,7 @@ export const AppliedJobs = () => {
   // console.log(applied);
   // const getCurrent = async () => {
   //   try {
-  //     const response = await axios.get("http://localhost:5000/getappliedjobs", {
+  //     const response = await axios.get("https://tanit-ecommerce-check.onrender.com/getappliedjobs", {
   //       withCredentials: true,
   //     });
   //     console.log(response);
@@ -34,7 +34,7 @@ export const AppliedJobs = () => {
     try {
       console.log(selected);
       const response = await axios.put(
-        `http://localhost:5000/deleteapplied/${selected}`,
+        `https://tanit-ecommerce-check.onrender.com/deleteapplied/${selected}`,
         {},
         {
           withCredentials: true,

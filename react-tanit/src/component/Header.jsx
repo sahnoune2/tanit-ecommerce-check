@@ -17,7 +17,7 @@ export const Header = () => {
   const logout = async () => {
     try {
       const response = await axios.delete(
-        "http://localhost:5000/deletecookie",
+        "https://tanit-ecommerce-check.onrender.com/deletecookie",
         { withCredentials: true }
       );
       console.log(response);

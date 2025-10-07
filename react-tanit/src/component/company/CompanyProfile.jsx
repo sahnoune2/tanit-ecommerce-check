@@ -26,7 +26,7 @@ export const CompanyProfile = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        "http://localhost:5000/updatecompany",
+        "https://tanit-ecommerce-check.onrender.com/updatecompany",
         company,
         { withCredentials: true }
       );

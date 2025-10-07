@@ -12,7 +12,7 @@ export const Cv = () => {
     const getCandidate = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/getuserid/${candidateID}`,
+          `https://tanit-ecommerce-check.onrender.com/getuserid/${candidateID}`,
           {
             withCredentials: true,
           }
@@ -20,7 +20,7 @@ export const Cv = () => {
         if (response.status === 200) {
           console.log(response.data.userFound);
           setUser(response.data.userFound);
-          console.log("user found")
+          console.log("user found");
         }
       } catch (error) {
         console.log(error);

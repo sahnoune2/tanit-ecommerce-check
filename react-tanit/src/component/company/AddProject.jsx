@@ -22,7 +22,7 @@ export const AddProject = () => {
   const handleDelete = async (selected) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/deletejob/${selected}`,
+        `https://tanit-ecommerce-check.onrender.com/deletejob/${selected}`,
         { withCredentials: true }
       );
       if (response.status === 200) {
@@ -40,7 +40,7 @@ export const AddProject = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/editjob/${selected}`,
+        `https://tanit-ecommerce-check.onrender.com/editjob/${selected}`,
         job,
         { withCredentials: true }
       );
@@ -63,9 +63,13 @@ export const AddProject = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/addjob", job, {
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        "https://tanit-ecommerce-check.onrender.com/addjob",
+        job,
+        {
+          withCredentials: true,
+        }
+      );
 
       if (response.status === 200) {
         toast.success("job added successfully");

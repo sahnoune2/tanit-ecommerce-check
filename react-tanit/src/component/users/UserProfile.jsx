@@ -26,7 +26,7 @@ export const UserProfile = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        "http://localhost:5000/updateuser",
+        "https://tanit-ecommerce-check.onrender.com/updateuser",
         company,
         { withCredentials: true }
       );

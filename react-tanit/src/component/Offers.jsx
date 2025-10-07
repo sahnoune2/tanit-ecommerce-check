@@ -6,19 +6,16 @@ import { toast } from "react-toastify";
 export const Offers = () => {
   const { jobs, connectedUser } = useLoaderData();
   console.log(jobs);
-  
-
- 
 
   const applyJob = async (selected) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/applyjob/${selected}`,
+        `https://tanit-ecommerce-check.onrender.com/applyjob/${selected}`,
         { user: connectedUser._id },
         { withCredentials: true }
       );
       if (response.status === 200) {
-        console.log(response)
+        console.log(response);
         toast.success("infto of applied job sent");
       }
     } catch (error) {

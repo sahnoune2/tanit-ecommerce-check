@@ -12,7 +12,7 @@ export const Code = () => {
   const handleCode = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/signup",
+        "https://tanit-ecommerce-check.onrender.com/signup",
         {
           code: code,
         },

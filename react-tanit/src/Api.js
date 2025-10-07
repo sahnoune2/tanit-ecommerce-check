@@ -3,9 +3,12 @@ import { resolvePath } from "react-router-dom";
 
 export const getCurrent = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/getCurrent", {
-      withCredentials: true,
-    });
+    const response = await axios.get(
+      "https://tanit-ecommerce-check.onrender.com/getCurrent",
+      {
+        withCredentials: true,
+      }
+    );
     console.log(response);
     if (response.status === 200) {
       return response.data.user;
@@ -17,7 +20,9 @@ export const getCurrent = async () => {
 };
 export const getJobs = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/getjobs");
+    const response = await axios.get(
+      "https://tanit-ecommerce-check.onrender.com/getjobs"
+    );
     console.log(response);
     if (response.status === 200) {
       return response.data.job;

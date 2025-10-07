@@ -11,7 +11,6 @@ export const Signup = () => {
   });
   const [confirm, setConfirm] = useState("");
   const navigate = useNavigate();
-  
 
   console.log(typeof newUser.method);
 
@@ -24,7 +23,7 @@ export const Signup = () => {
         toast.error("password does not match ");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/code",
+          "https://tanit-ecommerce-check.onrender.com/code",
           newUser
         );
         if (response.status === 200) {
