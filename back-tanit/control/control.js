@@ -16,8 +16,8 @@ exports.emailValidation = async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "wajihkurousagi@gmail.com",
-      pass: "vagm seay dcmo ltnz",
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
     },
   });
   try {
